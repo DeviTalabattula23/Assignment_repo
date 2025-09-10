@@ -15,35 +15,27 @@
         <div class="card shadow-lg rounded-3">
           <div class="card-body p-4">
 
-            <h2 class="text-center mb-4">My To-Do List</h2>
+            <div class="d-flex justify-content-center">
+            <img  class="mb-3 " src="https://assets.dryicons.com/uploads/icon/svg/6149/0a378a74-6133-4bb0-8149-2b9a4861b0a4.svg" alt="To do logo" style="width:40px;height:40px,">
+            <h2 class="text-center mb-4 mx-5 h-4">My To-Do List</h2>
+            </div>
 
+            <!-- Input + Add button -->
             <div class="input-group mb-3">
               <input type="text" class="form-control" placeholder="Enter a task...">
               <button class="btn btn-primary">Add</button>
             </div>
 
-            
-            <div class="d-flex justify-content-around mb-3">
-              <button class="btn btn-outline-secondary btn-sm">All</button>
-              <button class="btn btn-outline-success btn-sm">Completed</button>
-              <button class="btn btn-outline-warning btn-sm">Pending</button>
+            <!-- Filter buttons -->
+             <div class="d-flex justify-content-around mb-3">
+                <button class="btn btn-outline-secondary btn-sm" id="all-btn">All</button>
+                <button class="btn btn-outline-success btn-sm" id="completed-btn">Completed</button>
+                <button class="btn btn-outline-warning btn-sm" id="pending-btn">Pending</button>
             </div>
 
+            <!-- Task list -->
             <ul class="list-group">
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                <div>
-                  <input type="checkbox" class="form-check-input">
-                  Sample Task 1
-                </div>
-                <button class="btn btn-sm btn-danger">Delete</button>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center">
-                <div>
-                  <input type="checkbox" class="form-check-input">
-                  Sample Task 2
-                </div>
-                <button class="btn btn-sm btn-danger">Delete</button>
-              </li>
+              <!-- tasks will appear here -->
             </ul>
 
           </div>
@@ -52,5 +44,7 @@
       </div>
     </div>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
