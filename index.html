@@ -16,27 +16,26 @@
           <div class="card-body p-4">
 
             <div class="d-flex justify-content-center">
-            <img  class="mb-3 " src="https://assets.dryicons.com/uploads/icon/svg/6149/0a378a74-6133-4bb0-8149-2b9a4861b0a4.svg" alt="To do logo" style="width:40px;height:40px,">
-            <h2 class="text-center mb-4 mx-5 h-4">My To-Do List</h2>
+              <img class="mb-3" src="https://assets.dryicons.com/uploads/icon/svg/6149/0a378a74-6133-4bb0-8149-2b9a4861b0a4.svg" 
+                   alt="To do logo" style="width:40px;height:40px;">
+              <h2 class="text-center mb-4 mx-5 h-4">My To-Do List</h2>
             </div>
 
             <!-- Input + Add button -->
             <div class="input-group mb-3">
               <input type="text" class="form-control" placeholder="Enter a task...">
-              <button class="btn btn-success">Let's do it!</button>
+              <button class="btn btn-primary">Let's do it!</button> <!-- ✅ fixed to btn-primary -->
             </div>
 
-            <!-- Filter buttons -->
-             <div class="d-flex justify-content-around mb-3">
-                <button class="btn btn-outline-primary btn-sm" id="all-btn">All</button>
-                <button class="btn btn-outline-success btn-sm" id="completed-btn">Completed</button>
-                <button class="btn btn-outline-warning btn-sm" id="pending-btn">Pending</button>
+            <!-- Filter buttons (optional for later) -->
+            <div class="d-flex justify-content-around mb-3">
+              <button class="btn btn-outline-primary btn-sm mb-2" id="all-btn">All</button>
+              <button class="btn btn-outline-success btn-sm mb-2" id="completed-btn">Completed</button>
+              <button class="btn btn-outline-warning btn-sm" id="pending-btn">Pending</button>
             </div>
 
             <!-- Task list -->
-            <ul class="list-group">
-              <!-- tasks will appear here -->
-            </ul>
+            <ul class="list-group"></ul>
 
           </div>
         </div>
