@@ -1,9 +1,24 @@
 const taskInput = document.querySelector(".form-control"); 
 const addBtn = document.querySelector(".btn-primary");     
-const taskList = document.querySelector(".list-group");    
+const taskList = document.querySelector(".list-group"); 
+
+//add task when pressing enter 
+taskInput.addEventListener("keypress",(e)=>{
+  if(e.key==="Enter"){
+    addBtn.click();
+  }
+});
+
 
 addBtn.addEventListener("click", () => {
   const text = taskInput.value.trim();
+
+  //give alert if we try to add without text
+  if(text===""){
+    alert('You need to enter a task!');
+    return;
+
+  }
 
   if (text !== "") { 
     // create list item
@@ -23,19 +38,24 @@ addBtn.addEventListener("click", () => {
     const span = document.createElement("span");
     span.textContent = text;
 
+   //writing emoji
+    const write=document.createElement("span");
+    write.textContent="✍";
+
     // toggle completed class when checkbox changes
     checkbox.addEventListener("change", () => {
       span.classList.toggle("completed", checkbox.checked);
     });
 
-    // put checkbox and text inside list item
+    // put checkbox ,emoji and text inside list item
     div.appendChild(checkbox);
+    div.appendChild(write);
     div.appendChild(span);
-
+    
     //delete button
     const delBtn=document.createElement("button");
     delBtn.className="btn btn-sm btn-danger ";
-    delBtn.textContent="Delete";
+    delBtn.textContent="Delete 🗑";
 
 
     //remove the task

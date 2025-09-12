@@ -13,4 +13,6 @@
  /* Customize card a bit */
 .card {
   border: none;
+  background: linear-gradient(135deg,gray,white,gray);
 }
+
