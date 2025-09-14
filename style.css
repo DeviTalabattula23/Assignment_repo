@@ -1,5 +1,6 @@
 /* Completed task look */
-.completed {
+input[type="checkbox"]:checked ~ .task-wrapper span,
+input[type="checkbox"]:checked ~ .task-wrapper .task-time {
   text-decoration: line-through;
   color: gray;
   opacity: 0.7;

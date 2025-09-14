@@ -23,19 +23,19 @@
 
             <!-- Input + Add button -->
             <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="Enter a task...">
-              <button class="btn btn-primary">Let's do it!</button> <!-- ✅ fixed to btn-primary -->
+              <input type="text" id="taskInput" class="form-control" placeholder="Enter a task...">
+              <button class="btn btn-primary" id="addBtn">Let's do it!</button> <!-- ✅ fixed to btn-primary -->
             </div>
 
             <!-- Filter buttons (optional for later) -->
             <div class="d-flex justify-content-around mb-3">
-              <button class="btn btn-outline-primary btn-sm mb-2" id="all-btn">All</button>
-              <button class="btn btn-outline-success btn-sm mb-2" id="completed-btn">Completed</button>
-              <button class="btn btn-outline-warning btn-sm" id="pending-btn">Pending</button>
+              <button class="btn btn-outline-primary btn-sm mb-2" filter-data="all">All</button>
+              <button class="btn btn-outline-success btn-sm mb-2" filter-data="completed">Completed</button>
+              <button class="btn btn-outline-warning btn-sm mb-2" filter-data="pending">Pending</button>
             </div>
 
             <!-- Task list -->
-            <ul class="list-group"></ul>
+            <ul id="taskList" class="list-group"></ul>
 
           </div>
         </div>
