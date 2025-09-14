@@ -15,3 +15,9 @@ input[type="checkbox"]:checked ~ .task-wrapper .task-time {
 .card {
   border: none;
 }
+
+button:disabled {
+  background-color: #ddd !important;
+  color: #888 !important;
+  cursor: not-allowed !important;
+}

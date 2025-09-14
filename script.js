@@ -44,7 +44,9 @@ function renderTasks(filter = "all") {
     checkbox.type = "checkbox";
     checkbox.checked = task.completed;
     checkbox.className = "form-check-input";
-    checkbox.addEventListener("change", () =>{ task.completed = checkbox.checked;
+    checkbox.addEventListener("change", () =>{ 
+      task.completed = checkbox.checked;
+      renderTasks(filter);
   });
    //wrapper for text and timestamp
     const textWrapper = document.createElement("div");
@@ -84,7 +86,11 @@ function renderTasks(filter = "all") {
     const editBtn = document.createElement("button");
     editBtn.className = "btn btn-sm btn-outline-info me-2";
     editBtn.textContent = task.editing ? "Save" : "Edit";
-    editBtn.addEventListener("click", () => {
+
+    if (task.completed) {
+      editBtn.disabled = true; // disable when task is completed
+    } else {
+     editBtn.addEventListener("click", () => {
       if (task.editing) {
         task.text = textElement.value.trim() || task.text;
         task.editing = false;
@@ -93,6 +99,7 @@ function renderTasks(filter = "all") {
       }
       renderTasks(filter);
     });
+  }
 
     const deleteBtn = document.createElement("button");
     deleteBtn.className = "btn btn-sm btn-outline-danger";
